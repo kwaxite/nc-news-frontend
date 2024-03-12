@@ -3,16 +3,6 @@ import "../ArticlesList/ArticlesList.css"
 import { useEffect } from "react";
 import { useState } from "react";
 
-// fetchAllArticles()
-// .then((response) => {
-//     console.log("from articles")
-//     console.log(response);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   })
-
-
 export default function ArticlesList(){
 
     const [articles, setArticles] = useState([]);
@@ -28,7 +18,6 @@ export default function ArticlesList(){
 
       if (isLoading) return <p>Loading...</p>
  
-    //   {author: 'tickle122', title: 'Agility Training Drills For Football Players', topic: 'football', article_id: 21, created_at: '2020-10-26T10:05:00.000Z', …}
     return (
         <>
         <div className="header-container">

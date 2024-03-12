@@ -35,6 +35,8 @@ export default function ArticlesList() {
                             <p> Created at: {article.created_at}</p>
                             <p> Votes: {article.votes}</p>
                             <p> Comment count: {article.comment_count}</p>
+                            <Link to={`/articles/${article.article_id}/comments`}> <h3>Comments</h3> </Link>
+
                         </div>
                     );
                 })}

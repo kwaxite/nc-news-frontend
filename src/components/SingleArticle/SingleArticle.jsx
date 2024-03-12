@@ -29,6 +29,7 @@ export default function SingleArticle() {
                 <p> Created at: {article.created_at}</p>
                 <p>Votes: {article.votes}</p>
                 <p>Topic: {article.topic}</p>
+                
             </div>
 
         </>

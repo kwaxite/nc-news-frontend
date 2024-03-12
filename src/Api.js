@@ -9,3 +9,11 @@ export const fetchAllArticles = () =>{
         return data.articles
     })
 }
+
+
+export const fetchArticleById = (article_id) =>{
+    return ncNewsApi.get(`/articles/${article_id}`).then(({data}) =>{
+        console.log(data.article)
+        return data.article
+    })
+}

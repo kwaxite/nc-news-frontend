@@ -3,6 +3,7 @@ import "./ArticleCommentsList.css"
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import SingleArticle from "../SingleArticle/SingleArticle";
 
 export default function ArticleCommentsList() {
 
@@ -25,6 +26,7 @@ export default function ArticleCommentsList() {
 
     return (
         <>
+            <SingleArticle/>
             <div className="comments-header">
                 <h1>Comments</h1>
             </div>

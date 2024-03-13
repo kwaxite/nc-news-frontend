@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import "../SingleArticle/SingleArticle.css";
 
+
 export default function SingleArticle() {
     const { article_id } = useParams()
     const [article, setArticle] = useState({})
@@ -15,7 +16,7 @@ export default function SingleArticle() {
             setArticle(articleFromApi);
             setIsLoading(false);
         });
-    }, []);
+    }, [article_id]);
 
     if (isLoading) return <p>Loading...</p>;
     return (
@@ -29,8 +30,8 @@ export default function SingleArticle() {
                 <p> Created at: {article.created_at}</p>
                 <p>Votes: {article.votes}</p>
                 <p>Topic: {article.topic}</p>
-                
             </div>
+
 
         </>
     )

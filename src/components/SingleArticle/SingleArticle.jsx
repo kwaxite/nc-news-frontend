@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import "../SingleArticle/SingleArticle.css";
 import { formatDateAndTime } from "../../Utils";
-import ArticleCommentsList from "../ArticleCommentsList/ArticleCommentsList";
+
 
 
 
@@ -34,9 +34,6 @@ export default function SingleArticle() {
                 <p>Topic: {article.topic}</p>
                 <Link to={`/articles/${article.article_id}/comments`}> <h3>Comments</h3> </Link>
             </div>
-            
-
-
         </>
     )
 }

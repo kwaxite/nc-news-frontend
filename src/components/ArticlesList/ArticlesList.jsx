@@ -3,6 +3,7 @@ import "../ArticlesList/ArticlesList.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { formatDateAndTime } from "../../Utils";
 
 export default function ArticlesList() {
     const [articles, setArticles] = useState([]);
@@ -32,7 +33,7 @@ export default function ArticlesList() {
                             <img className="article-image" src={article.article_img_url} />
                             <p> Author: {article.author}</p>
                             <p> topic: {article.topic}</p>
-                            <p> Created at: {article.created_at}</p>
+                            <p> Created: {formatDateAndTime(article.created_at)}</p>
                             <p> Votes: {article.votes}</p>
                             <p> Comment count: {article.comment_count}</p>
                             <Link to={`/articles/${article.article_id}/comments`}> <h3>Comments</h3> </Link>

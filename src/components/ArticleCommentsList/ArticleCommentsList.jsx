@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import SingleArticle from "../SingleArticle/SingleArticle";
+import { formatDateAndTime } from "../../Utils";
 
 export default function ArticleCommentsList() {
 
@@ -36,8 +37,9 @@ export default function ArticleCommentsList() {
                         <div className="comment-detail" key={index}>
                             <p className="comment-body">{comment.body}</p>
                             <div className="author-time">
-                            <p>{comment.author}</p>
-                            <p>{comment.created_at}</p>
+                            <p>by {comment.author},</p>
+                            <p>{" "}</p>
+                            <p> {formatDateAndTime(comment.created_at)}</p>
                             </div>
                         </div>
                     )

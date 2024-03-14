@@ -4,7 +4,9 @@ import "../Home/Home.css"
 export default function Home(){
     return (
         <>
-        <h1>Welcome to NC News</h1>
+        <div className="header">
+        <p className="head-text">Home</p>
+        </div>
         </>
     )
 }

@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import SingleArticle from "../SingleArticle/SingleArticle";
 import { formatDateAndTime } from "../../Utils";
+import CommentsAdder from "../CommentsAdder/CommentsAdder";
+
+
 
 export default function ArticleCommentsList() {
 
@@ -29,6 +32,7 @@ export default function ArticleCommentsList() {
             <div className="comments-header">
                 <h1>Comments</h1>
             </div>
+            <CommentsAdder/>
             <ul>
                 {comments.map((comment, index) => {
                     return (

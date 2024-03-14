@@ -9,6 +9,7 @@ export default function Header() {
         <Logo />
         <Link to="/">Home</Link>
         <Link to="/articles">Articles</Link>
+        <Link to="/api/users">Users</Link>
       </nav>
     </>
   );

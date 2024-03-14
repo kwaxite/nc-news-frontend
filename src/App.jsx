@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import ArticlesList from './components/ArticlesList/ArticlesList';
 import SingleArticle from './components/SingleArticle/SingleArticle';
 import ArticleCommentsList from './components/ArticleCommentsList/ArticleCommentsList';
+import UsersList from './components/UsersList/UsersList';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path='/articles' element={<ArticlesList />}></Route>
         <Route path='/articles/:article_id' element={<SingleArticle />}></Route>
         <Route path='/articles/:article_id/comments' element={<ArticleCommentsList/>}>Comments</Route>
-       
+        <Route path='/api/users' element={<UsersList />}></Route>
       </Routes>
     </>
   )

@@ -36,3 +36,16 @@ export const patchNegativeVote = (article_id) => {
     }) 
 }
 
+export const postComment = (userid, newCommentText) => {
+    const postBody = {
+        username: userid,
+        body: newCommentText,
+
+    }
+}
+
+export const fetchAllUsers = () => {
+    return ncNewsApi.get("/users").then(({ data }) => {
+        return data.users
+    })
+}

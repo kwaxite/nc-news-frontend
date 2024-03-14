@@ -1,0 +1,11 @@
+.CommentAdder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+#newComment{
+    width: 400px;
+    height: 100px;
+}

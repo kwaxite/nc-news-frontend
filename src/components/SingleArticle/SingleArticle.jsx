@@ -13,7 +13,7 @@ export default function SingleArticle() {
     const [article, setArticle] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     const [vote, setNewVote] = useState(article.votes)
-    
+
 
     useEffect(() => {
         setIsLoading(true);
@@ -23,13 +23,13 @@ export default function SingleArticle() {
         });
     }, [article_id]);
 
-    const newVote = (article_id) =>{
-        article.votes = article.votes - 1
+    const newVote = (article_id) => {
+        article.votes = article.votes + 1
         setNewVote(article.votes)
         patchVote(article_id)
     }
-    const newVoteNegative = (article_id) =>{
-        article.votes = article.votes + 1
+    const newVoteNegative = (article_id) => {
+        article.votes = article.votes - 1
         setNewVote(article.votes)
         patchNegativeVote(article_id)
     }
@@ -44,19 +44,19 @@ export default function SingleArticle() {
                 <p>{article.body}</p>
                 <p> Created: {formatDateAndTime(article.created_at)}</p>
                 <span>Votes: {article.votes} </span>
-                <button onClick={()=> {
-                newVoteNegative(article.article_id)
+                <button onClick={() => {
+                    newVote(article.article_id)
                 }}>
-                <span aria-label="votes for this article"> 👍🏾 </span>
+                    <span aria-label="votes for this article"> 👍🏾 </span>
                 </button>
                 <span> </span>
-                <button onClick={()=> {
-                newVote(article.article_id)
+                <button onClick={() => {
+                    newVoteNegative(article.article_id)
                 }}>
-               
-                <span aria-label="votes for this article">👎🏾</span>
+
+                    <span aria-label="votes for this article">👎🏾</span>
                 </button>
-             
+
 
 
 

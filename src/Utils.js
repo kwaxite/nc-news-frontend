@@ -4,3 +4,12 @@ export const formatDateAndTime = (iso) => {
     let formattedDateTime = dateonly + " at " + timeonly
     return formattedDateTime
 };
+
+// export const patchVote = (article_id) => {
+//     const patchBody = {inc_votes: 1 }
+//     return newVote
+//     .patch(`/articles/${article_id}`, patchBody)
+//     .then((data) => {
+//         return data.article
+//     })
+// }

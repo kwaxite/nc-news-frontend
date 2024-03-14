@@ -19,7 +19,6 @@ export const fetchArticleById = (article_id) => {
 
 export const fetchCommentsByArticleId = (article_id) =>{
     return ncNewsApi.get(`/articles/${article_id}/comments`).then(({ data }) => {
-        console.log (data.comments)
         return data.comments
     })
 }

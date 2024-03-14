@@ -8,9 +8,7 @@ import { formatDateAndTime } from "../../Utils";
 
 export default function ArticleCommentsList() {
 
-    console.log("from useParams", useParams())
     const { article_id } = useParams()
-    console.log("from article id", article_id)
 
     const [comments, setComments] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -44,10 +42,7 @@ export default function ArticleCommentsList() {
                         </div>
                     )
                 })}
-
             </ul>
-
-
         </>
     )
 }
